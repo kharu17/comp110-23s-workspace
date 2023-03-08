@@ -11,8 +11,10 @@
 
 
 
-x: int = 12
-if x%2 == 0:
-    print (float(x))
-print(f"{x} is odd.")
+x: int = 1
+
+def f(y: int) -> int:
+    return x + y
+
+print(f(x+1))
     
