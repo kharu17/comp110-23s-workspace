@@ -10,30 +10,21 @@
 #print(rat)
 
 
+#s: dict[int, int] = {}
 
-x: int = 1
+#i: int = 1
+#while i < 5:
+    #s[1 ** 2] = i
+    #i += 1
 
-def f(y: int) -> int:
-    return x + y
+#print(s)
 
-print(f(x+1))
-    
-def only_evens(num_list: list[int]) -> list:
-    """Returns a list of even numbers given a list of integers."""
-    even = []
-    for i in range(len(num_list)):
-        if num_list[i] % 2 == 0:
-            even.append(num_list[i])
-    return even
+def shrink(xs: dict[str, int]) -> list[int]:
+    new_list: list[int] = []
+    for x in xs:
+        if xs[x] % 2 == 0 and xs[x] < 18:
+            new_list.append(xs[x])
+    return new_list
 
-def sub(list: list[int], start: int, end: int) -> list:
-    sub = []
-    for i in range(len(list)):
-        if i >= end -1 or i < start -1:
-            sub.append(list[i])
-    return sub 
-
-list: a_list
-a_list = [10, 20, 30, 40]
-sub(a_list, 1, 3)
-print(sub)
+y = shrink({"h": 4, "b": 20})
+print(y)
